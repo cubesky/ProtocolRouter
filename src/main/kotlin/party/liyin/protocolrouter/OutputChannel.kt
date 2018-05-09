@@ -6,7 +6,7 @@ import java.util.function.Function
 class OutputChannel {
     companion object {
         private val lock = Semaphore(1)
-        fun addProtocolFunction(func:Function<RawDataBlock,Void>) : Int {
+        fun addProtocolFunction(func:Function<RawDataBlock,Unit>) : Int {
             lock.acquireUninterruptibly()
             if (GlobalStore.processfuncIndex.isEmpty()) {
                 GlobalStore.processfuncIndex.add(GlobalStore.processfunc.size)

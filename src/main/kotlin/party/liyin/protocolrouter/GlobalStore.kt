@@ -9,7 +9,7 @@ class GlobalStore {
     companion object {
         val pipeList = mutableMapOf<String,Pipe>()
         val selector = Selector.open()
-        val processfunc : MutableMap<Int, Function<RawDataBlock,Void>> = mutableMapOf()
+        val processfunc : MutableMap<Int, Function<RawDataBlock,Unit>> = mutableMapOf()
         var processfuncIndex : MutableSet<Int> = mutableSetOf()
     }
 }

@@ -38,7 +38,7 @@ If this is called after `unregister` , it will return an Exception.
 ```java
 int id = OutputChannel.Companion.addProtocolFunction(rawDataBlock -> {
      System.out.println("Load: " + new String(rawDataBlock.getData()) + " on " + rawDataBlock.getName());
-     return null;
+     return;
  });
 ```
 
